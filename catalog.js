@@ -84,4 +84,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
 //   `
 //   card.classList.add("card");
 //   return card;
+
+// CLick to see NAME other product
+function additionLinkConstructor (name,linkHref){
+    this.name = name;
+    this.linkHref = linkHref; //CLASS
+}
+
+function additionLink(data) {
+    this.name = data.name;
+    this.linkHref = data.linkHref;
+}
+
+// (ANCHOR TO CLASS, Artist Name)
+additionLink.prototype.render = function() {
+    const href = document.createElement("div");
+    href.innerHTML = `
+    <a href="${this.linkHref}">click to see ${this.name} other product! </a>
+    `
+    href.classList.add("anchor")
+    return href;
+}
+
+
+// HWEEEE THEY CLOSED THE FORM, HOW TF I GOING TO MAKE THEM WEB??
 });
