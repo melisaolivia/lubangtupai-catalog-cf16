@@ -224,12 +224,15 @@ LocalCattoCatalog.append(CattoBookMark1);
     const bayuPrintIna02 = bayuNewPrintIna02.render();
 
   // card OLLIE03
-    
+    const bayuOllie03 = new productConstructor("BO3_ollie","bayuputraadyas/BO3_ollie.png", "Print A3/A4","bayuputraadsa Ollie Artprint A3/A4")
+    const bayuNewOllie03 = new productCatalog(bayuOllie03);
+    const bayuPrintOllie03 = bayuNewOllie03.render()
 // bayuputraadyas parrent
   const bayuputraadyasCatalog = document.querySelector(".bayuputraadyas");
   bayuputraadyasCatalog.append(bayuputraadyasSosmed);
   bayuputraadyasCatalog.append(bayuPrintIna01);
   bayuputraadyasCatalog.append(bayuPrintIna02);
+  bayuputraadyasCatalog.append(bayuPrintOllie03);
 
 const pastelwortell = new Artist ("@pastelwortell","pastelwortell","pastelwortell");
 const pastelwortellLink = new SocialLinksComponent(pastelwortell);
