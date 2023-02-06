@@ -227,12 +227,31 @@ LocalCattoCatalog.append(CattoBookMark1);
     const bayuOllie03 = new productConstructor("BO3_ollie","bayuputraadyas/BO3_ollie.png", "Print A3/A4","bayuputraadsa Ollie Artprint A3/A4")
     const bayuNewOllie03 = new productCatalog(bayuOllie03);
     const bayuPrintOllie03 = bayuNewOllie03.render()
-// bayuputraadyas parrent
+  
+  // card OLLIECALLI04
+    const bayuOllieCallie04 = new productConstructor("BO4_ollieCalli","/bayuputraadyas/BO4_ollieCalli.png","Print A3/A4", "bayuputraadsa Ollie Calli Artprint A3/A4");
+    const bayuNewOllieCallie04 = new productCatalog(bayuOllieCallie04);
+    const bayuPrintOllieCallie04 = bayuNewOllieCallie04.render();
+  
+  // card OLLIE05 
+    const bayuOllie05 = new productConstructor("BO5_Ollie","bayuputraadyas/BO5_ollie.png","Print A3/A4","bayuputraadsa Ollie Artprint A3/A4");
+    const bayuNewOllie05 = new productCatalog(bayuOllie05);
+    const bayuPrintOllie05 = bayuNewOllie05.render();
+
+  // card OLLIEIOFI06 
+    const bayuOllieIofi06 = new productConstructor("B06_OllieIofi", "bayuputraadyas/B06_ollieIofi.png","Print A3/A4","bayuputraadsa Ollie Iofi Artprint A3/A4")
+    const bayuNewOllieIofi06 = new productCatalog(bayuOllieIofi06);
+    const bayuPrintOllieIofi06 = bayuNewOllieIofi06.render();
+
+    // bayuputraadyas parrent
   const bayuputraadyasCatalog = document.querySelector(".bayuputraadyas");
   bayuputraadyasCatalog.append(bayuputraadyasSosmed);
   bayuputraadyasCatalog.append(bayuPrintIna01);
   bayuputraadyasCatalog.append(bayuPrintIna02);
   bayuputraadyasCatalog.append(bayuPrintOllie03);
+  bayuputraadyasCatalog.append(bayuPrintOllieCallie04);
+  bayuputraadyasCatalog.append(bayuPrintOllie05);
+  bayuputraadyasCatalog.append(bayuPrintOllieIofi06);
 
 const pastelwortell = new Artist ("@pastelwortell","pastelwortell","pastelwortell");
 const pastelwortellLink = new SocialLinksComponent(pastelwortell);
