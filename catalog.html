@@ -212,15 +212,24 @@ LocalCattoCatalog.append(CattoBookMark1);
   const bayuputraadyas = new Artist ("bayuputraadyas", "bayuputraadyasa","bayuputraadyasa");
   const bayuputraadyasLink = new SocialLinksComponent(bayuputraadyas);
   const bayuputraadyasSosmed = bayuputraadyasLink.render();
-// card 01 (item code, img src,type product, alt text)
-  const bayuIna01 = new productConstructor("B01_ina","bayuputraadyas/B01_ina.png","Print A3/A4", "bayuputraadsa Ina Artprint A3/A4");
-  const bayuNewPrintIna01 = new productCatalog(bayuIna01);
-  const bayuPrintIna01 = bayuNewPrintIna01.render();
 
+  // card INA01 (item code, img src,type product, alt text)
+    const bayuIna01 = new productConstructor("B01_ina","bayuputraadyas/B01_ina.png","Print A3/A4", "bayuputraadsa Ina Artprint A3/A4");
+    const bayuNewPrintIna01 = new productCatalog(bayuIna01);
+    const bayuPrintIna01 = bayuNewPrintIna01.render();
 
-const bayuputraadyasCatalog = document.querySelector(".bayuputraadyas");
-bayuputraadyasCatalog.append(bayuputraadyasSosmed);
-bayuputraadyasCatalog.append(bayuPrintIna01);
+  // card INA02 
+    const bayuIna02 = new productConstructor("B02_ina","bayuputraadyas/B02_ina.png","Print A3/A4", "bayuputraadsa Ina Artprint A3/A4");
+    const bayuNewPrintIna02 = new productCatalog(bayuIna02);
+    const bayuPrintIna02 = bayuNewPrintIna02.render();
+
+  // card OLLIE03
+    
+// bayuputraadyas parrent
+  const bayuputraadyasCatalog = document.querySelector(".bayuputraadyas");
+  bayuputraadyasCatalog.append(bayuputraadyasSosmed);
+  bayuputraadyasCatalog.append(bayuPrintIna01);
+  bayuputraadyasCatalog.append(bayuPrintIna02);
 
 const pastelwortell = new Artist ("@pastelwortell","pastelwortell","pastelwortell");
 const pastelwortellLink = new SocialLinksComponent(pastelwortell);

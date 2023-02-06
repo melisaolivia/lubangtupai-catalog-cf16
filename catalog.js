@@ -67,21 +67,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
 //     const CattoBookMark1 = CattoNewBookMark1.render();
 
     
-})
+// })
 
-function productCatalog(data){
-  this.itemCode =data.itemCode;
-  this.imageUrl = data.imageUrl;
-  this.typeProduct = data.typeProduct;
-}
+// function productCatalog(data){
+//   this.itemCode =data.itemCode;
+//   this.imageUrl = data.imageUrl;
+//   this.typeProduct = data.typeProduct;
+// }
 
-productCatalog.prototype.render = function() {
-  const card = document.createElement("div");
-  card.innerHTML = `
-  <p class="cardtext">${this.itemCode}</p>
-  <img src="${this.imageUrl} alt="${this.itemCode}">
-  <p class="cardtext">${this.typeProduct}</p>
-  `
-  card.classList.add("card");
-  return card;
-}
+// productCatalog.prototype.render = function() {
+//   const card = document.createElement("div");
+//   card.innerHTML = `
+//   <p class="cardtext">${this.itemCode}</p>
+//   <img src="${this.imageUrl} alt="${this.itemCode}">
+//   <p class="cardtext">${this.typeProduct}</p>
+//   `
+//   card.classList.add("card");
+//   return card;
+});
