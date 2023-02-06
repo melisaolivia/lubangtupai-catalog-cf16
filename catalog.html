@@ -18,7 +18,7 @@
     <style>
        *{margin: 0px; padding: 0px;}
         #carouselExampleInterval {
-            /* max-height: ; */
+            /* max-height: ; */line-height: normal;
         }
         body {
           font-family:'Rubik', sans-serif ;
@@ -122,9 +122,10 @@
         </ol>
       </div>
       
-      <div id="localCattoCatalog"></div>
-      <script>
+      <div class="localCattoCatalog"></div>
+      <div class="pastelwortellCatalog"></div>
 
+      <script>
         
     // function Artist(name, instagram, twitter, pixiv){
     //     this.name = name;
@@ -222,7 +223,7 @@ function SocialLinksComponent(data) {
 }
 
 SocialLinksComponent.prototype.render = function() {
-  var componentEl = document.createElement('div');
+  const componentEl = document.createElement('div');
   componentEl.innerHTML = `
     <hr class="horizontal-lined">
     <p class="Artist Name">Artist : ${this.name}</p>
@@ -231,15 +232,15 @@ SocialLinksComponent.prototype.render = function() {
     if (this.instagram) {
     componentEl.innerHTML += `
     <a href="https://www.instagram.com/${this.instagram}" target="_blank"><img src= "image/icon_instagram.svg">${this.instagram}</a>
-    `}
+    `;}
     if (this.twitter) {
     componentEl.innerHTML += `
     <a href="https://twitter.com/${this.twitter}" target="_blank"><img src= "image/icon_twitter.svg">${this.twitter}</a>
-    `}
+    `;}
     if (this.pixiv) {
     componentEl.innerHTML += `
     <a href="https://www.pixiv.net/${this.pixiv}" target="_blank"><img src= "image/icon_pixiv.svg">${this.pixiv}</a>
-    `}
+    `;}
   componentEl.classList.add('sosmedLink');
   return componentEl;
 };
@@ -247,12 +248,14 @@ SocialLinksComponent.prototype.render = function() {
 const localCatto = new Artist("@localcatto","localcatto","localcatto","localcatto");
 const cattoLink = new SocialLinksComponent(localCatto);
 const cattoSosmed = cattoLink.render();
-const LocalCattoCatalog = getElementById('localCattoCatalog');
+const LocalCattoCatalog = document.querySelector('.localCattoCatalog'); //query = class only boi
 LocalCattoCatalog.append(cattoSosmed);
+
 
 const pastelwortell = new Artist ("@pastelwortell","pastelwortell","pastelwortell");
 const pastelwortellLink = new SocialLinksComponent(pastelwortell);
 const pastelwortellSosmed = pastelwortellLink.render();
-document.body.appendChild(pastelwortellSosmed);
+const pastelwortellCatalog = document.querySelector('.pastelwortellCatalog');
+pastelwortellCatalog.append(pastelwortellSosmed);
 
 </script>
