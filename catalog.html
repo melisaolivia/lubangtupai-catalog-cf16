@@ -123,8 +123,10 @@
       </div>
       
       <div class="localCattoCatalog"></div>
-      <div class="pastelwortellCatalog"></div>
+      <div class="bayuputraadyas"></div>
 
+      <!-- <img src="bayuputraadyas/B01_ina.png" alt=""> -->
+      <!-- bayuputraadyas -->
       <script>
 ///////////////////// button sosmed
 function Artist(name, instagram, twitter, pixiv){
@@ -180,7 +182,7 @@ function productConstructor (itemCode,imageUrl,typeProduct){
         const card = document.createElement("div");
         card.innerHTML = `
         <p class="cardtext">${this.itemCode}</p>
-        <img src="${this.imageUrl} alt="${this.title}">
+        <img src="${this.imageUrl}" alt="${this.title}" class="cardImage">
         <p class="cardtext">${this.typeProduct}</p>
         `
         card.classList.add("card");
@@ -189,11 +191,11 @@ function productConstructor (itemCode,imageUrl,typeProduct){
 
 ///////// validate data using variable
 
-// catto sosmed
+// catto sosmed (name artist (@), instagram, twitter, pixiv)
   const localCatto = new Artist("@localcatto","localcatto","localcatto","localcatto");
   const cattoLink = new SocialLinksComponent(localCatto);
   const cattoSosmed = cattoLink.render();
-//catto card product
+//catto card product (item code, img src,type product)
   const CattoBM1 = new productConstructor ("BM_01","image/icon_twitter.svg","bookmark");
   const CattoNewBookMark1 = new productCatalog(CattoBM1);
   const CattoBookMark1 = CattoNewBookMark1.render();
@@ -202,6 +204,21 @@ const LocalCattoCatalog = document.querySelector('.localCattoCatalog'); //query 
 LocalCattoCatalog.append(cattoSosmed);
 LocalCattoCatalog.append(CattoBookMark1);
 
+
+// @bayuputraadyasa
+// sosmed button
+  const bayuputraadyas = new Artist ("bayuputraadyas", "bayuputraadyasa","bayuputraadyasa");
+  const bayuputraadyasLink = new SocialLinksComponent(bayuputraadyas);
+  const bayuputraadyasSosmed = bayuputraadyasLink.render();
+// card 01 (item code, img src,type product)
+  const bayuIna01 = new productConstructor("B01_ina","bayuputraadyas/B01_ina.png","Print A3/A4");
+  const bayuNewPrintIna01 = new productCatalog(bayuIna01);
+  const bayuPrintIna01 = bayuNewPrintIna01.render();
+
+
+const bayuputraadyasCatalog = document.querySelector(".bayuputraadyas");
+bayuputraadyasCatalog.append(bayuputraadyasSosmed);
+bayuputraadyasCatalog.append(bayuPrintIna01);
 
 const pastelwortell = new Artist ("@pastelwortell","pastelwortell","pastelwortell");
 const pastelwortellLink = new SocialLinksComponent(pastelwortell);

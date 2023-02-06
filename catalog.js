@@ -38,34 +38,50 @@ document.addEventListener("DOMContentLoaded", function (event) {
     //   return componentEl;
     // };
     ////////////
-    function productConstructor (itemCode,imageUrl,typeProduct){
-        this.itemCode = itemCode;
-        this.imageUrl = imageUrl;
-        this.typeProduct = typeProduct;
-    }
+//     function productConstructor (itemCode,imageUrl,typeProduct){
+//         this.itemCode = itemCode;
+//         this.imageUrl = imageUrl;
+//         this.typeProduct = typeProduct;
+//     }
     
-    function productCatalog(data){
-        this.itemCode =data.itemCode;
-        this.imageUrl = data.imageUrl;
-        this.typeProduct = data.typeProduct;
-    }
+//     function productCatalog(data){
+//         this.itemCode =data.itemCode;
+//         this.imageUrl = data.imageUrl;
+//         this.typeProduct = data.typeProduct;
+//     }
     
-    productCatalog.prototype.render = function() {
-        const card = document.createElement("div");
-        card.innerHTML = `
-        <p class="cardtext">${this.itemCode}</p>
-        <img src="${this.imageUrl}">
-        <p class="cardtext">${this.typeProduct}</p>
-        `
-        card.classList.add("card");
-        return card;
-    }
+//     productCatalog.prototype.render = function() {
+//         const card = document.createElement("div");
+//         card.innerHTML = `
+//         <p class="cardtext">${this.itemCode}</p>
+//         <img src="${this.imageUrl}">
+//         <p class="cardtext">${this.typeProduct}</p>
+//         `
+//         card.classList.add("card");
+//         return card;
+//     }
 
-    ////////////////////////////////////////////////////////
-    const CattoBM1 = new productConstructor ("BM_01","image/icon_twitter.svg","bookmark");
-    const CattoNewBookMark1 = new productCatalog(CattoBM1);
-    const CattoBookMark1 = CattoNewBookMark1.render();
+//     ////////////////////////////////////////////////////////
+//     const CattoBM1 = new productConstructor ("BM_01","image/icon_twitter.svg","bookmark");
+//     const CattoNewBookMark1 = new productCatalog(CattoBM1);
+//     const CattoBookMark1 = CattoNewBookMark1.render();
 
     
 })
 
+function productCatalog(data){
+  this.itemCode =data.itemCode;
+  this.imageUrl = data.imageUrl;
+  this.typeProduct = data.typeProduct;
+}
+
+productCatalog.prototype.render = function() {
+  const card = document.createElement("div");
+  card.innerHTML = `
+  <p class="cardtext">${this.itemCode}</p>
+  <img src="${this.imageUrl} alt="${this.itemCode}">
+  <p class="cardtext">${this.typeProduct}</p>
+  `
+  card.classList.add("card");
+  return card;
+}
