@@ -166,23 +166,25 @@ SocialLinksComponent.prototype.render = function() {
   return componentEl;
 };
 /////////////////// card
-function productConstructor (itemCode,imageUrl,typeProduct){
+function productConstructor (itemCode,imageUrl,typeProduct,altText){
         this.itemCode = itemCode;
         this.imageUrl = imageUrl;
         this.typeProduct = typeProduct;
+        this.altText = altText;
     }
     
     function productCatalog(data){
         this.itemCode =data.itemCode;
         this.imageUrl = data.imageUrl;
         this.typeProduct = data.typeProduct;
+        this.altText = data.altText;
     }
     
     productCatalog.prototype.render = function() {
         const card = document.createElement("div");
         card.innerHTML = `
         <p class="cardtext">${this.itemCode}</p>
-        <img src="${this.imageUrl}" alt="${this.title}" class="cardImage">
+        <img src="${this.imageUrl}" alt="${this.altText}" class="cardImage">
         <p class="cardtext">${this.typeProduct}</p>
         `
         card.classList.add("card");
@@ -210,8 +212,8 @@ LocalCattoCatalog.append(CattoBookMark1);
   const bayuputraadyas = new Artist ("bayuputraadyas", "bayuputraadyasa","bayuputraadyasa");
   const bayuputraadyasLink = new SocialLinksComponent(bayuputraadyas);
   const bayuputraadyasSosmed = bayuputraadyasLink.render();
-// card 01 (item code, img src,type product)
-  const bayuIna01 = new productConstructor("B01_ina","bayuputraadyas/B01_ina.png","Print A3/A4");
+// card 01 (item code, img src,type product, alt text)
+  const bayuIna01 = new productConstructor("B01_ina","bayuputraadyas/B01_ina.png","Print A3/A4", "bayuputraadsa Ina Artprint A3/A4");
   const bayuNewPrintIna01 = new productCatalog(bayuIna01);
   const bayuPrintIna01 = bayuNewPrintIna01.render();
 
